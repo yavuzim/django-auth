@@ -2,13 +2,9 @@ import requests
 from pprint import pprint
 # {'key': '4ff921435913f03eb28baf99492e7ac66339a17a'}
 def client():
-    token = 'Token 4ff921435913f03eb28baf99492e7ac66339a17a'
+    token = 'Token 9f539ad6bdeab98ccac3466f0eddcdebe23baa5c'
     headers = {
         'Authorization': token,
-    }
-    credentials = {
-        'username': 'test_user',
-        'password': 'test123456789'
     }
     response = requests.get(
         url = 'http://127.0.0.1:8000/api/kullanici-profilleri/',

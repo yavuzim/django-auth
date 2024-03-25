@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'rest_auth.registration',
+    'django.contrib.sites',
     'django_extensions',
 ]
 
@@ -73,7 +78,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+#WSGI_APPLICATION = 'core.wsgi.application'
+ASGI_APPLICATION = 'DjangoBlog.asgi.application'
 
 
 # Database
@@ -145,3 +151,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication', # browserla api sayfası
     ]
 }
+
+SITE_ID = 1 # site id
+ACCOUNT_EMAIL_VERIFICATION = 'none' # kayıt esnasında email onayı istiyor muyuz?
+ACCOUNT_EMAIL_REQUIRED = (True,) # kayıt esnasında kullanıcı email adresi vermeli mi?
